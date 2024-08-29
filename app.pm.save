@@ -1,0 +1,55 @@
+  GNU nano 6.2                                app.py                                         
+import logging
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+logging.basicConfig(filename='sms_log.txt', level=logging.INFO)
+
+@app.route('/sms-receive', methods=['POST'])
+def sms_receive():
+    data = request.get_json()
+    from_number = data.get('from')
+    message_body = data.get('text')
+    logging.info(f"Received SMS from {from_number}: {message_body}")
+    print(f"Received SMS: {data}")
+    return jsonify({"status": "success"})
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                      [ Read 18 lines ]
+^G Help        ^O Write Out   ^W Where Is    ^K Cut         ^T Execute     ^C Location
+^X Exit        ^R Read File   ^\ Replace     ^U Paste       ^J Justify     ^/ Go To Line
