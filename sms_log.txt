@@ -873,3 +873,8 @@ INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
 INFO:root:Received SMS from 12345: Test Message from Postman
 INFO:werkzeug:45.128.133.230 - - [29/Aug/2024 19:13:29] "POST /sms-receive HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5000
+ * Running on https://10.132.0.2:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
